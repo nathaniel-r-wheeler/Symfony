@@ -9,12 +9,9 @@ class HelloController extends Controller
 {
     public function indexAction($name)
     {
-        # Render the content.
-        $content = $this->renderView(
+        return $this->render(
             "AcmeHelloBundle:Hello:index.html.twig",
             array('name' => $name)
         );
-
-        return new Response($content);
     }
 }
