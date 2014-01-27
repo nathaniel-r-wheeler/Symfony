@@ -9,11 +9,8 @@ class HelloController extends Controller
 {
     public function indexAction($name)
     {
-        # Locate the templating service.
-        $templating = $this->get('templating');
-        
         # Render the content.
-        $content = $templating->render(
+        $content = $this->renderView(
             "AcmeHelloBundle:Hello:index.html.twig",
             array('name' => $name)
         );
