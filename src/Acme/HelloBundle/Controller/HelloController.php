@@ -2,16 +2,16 @@
 
 namespace Acme\HelloBundle\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Response;
 
 class HelloController extends Controller
 {
+    /**
+     *@Template
+     */
     public function indexAction($name)
     {
-        return $this->render(
-            "AcmeHelloBundle:Hello:index.html.twig",
-            array('name' => $name)
-        );
+        return array('name' => $name);
     }
 }
