@@ -12,6 +12,6 @@ class HelloController extends Controller
      */
     public function indexAction($name)
     {
-        return array('name' => $name);
+        return compact('name');
     }
 }
